@@ -13,11 +13,13 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <span className="text-accent">Nights in Photoshop?</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Let me handle the retouching while you focus on growing your photography business.
-        </p>
+        <div className="pt-6">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Let me handle the retouching while you focus on growing your photography business.
+          </p>
+        </div>
 
-        <div className="pt-8">
+        <div className="pt-12">
           <Button
             variant="cta"
             size="xl"
@@ -28,9 +30,18 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           </Button>
         </div>
 
-        <div className="pt-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <p className="text-sm text-muted-foreground">
-            No commitment • 48-hour guarantee • Your style preserved
+        <div className="pt-16 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2 flex-wrap">
+            <span className="flex items-center gap-1">
+              <span>No commitment</span>
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <span className="text-accent">⭐</span>
+              <span>48-hour guarantee</span>
+            </span>
+            <span>•</span>
+            <span>Your style preserved</span>
           </p>
         </div>
       </div>

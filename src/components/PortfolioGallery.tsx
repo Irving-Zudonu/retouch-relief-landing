@@ -95,7 +95,11 @@ export const PortfolioGallery = () => {
         </div>
 
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <Button variant="outline" size="lg">
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => window.open('https://www.behance.net/gallery/123300611/BEFORE-AND-AFTER-PORTFOLIO', '_blank')}
+          >
             See Full Portfolio
           </Button>
         </div>
