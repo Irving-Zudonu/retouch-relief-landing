@@ -1,0 +1,105 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import before1 from "@/assets/before-1.jpg";
+import after1 from "@/assets/after-1.jpg";
+import before2 from "@/assets/before-2.jpg";
+import after2 from "@/assets/after-2.jpg";
+import before3 from "@/assets/before-3.jpg";
+import after3 from "@/assets/after-3.jpg";
+import before4 from "@/assets/before-4.jpg";
+import after4 from "@/assets/after-4.jpg";
+
+const portfolioItems = [
+  { before: before1, after: after1, type: "Portrait" },
+  { before: before2, after: after2, type: "Beauty" },
+  { before: before3, after: after3, type: "Newborn" },
+  { before: before4, after: after4, type: "Fashion" },
+];
+
+interface ComparisonImageProps {
+  before: string;
+  after: string;
+  type: string;
+}
+
+const ComparisonImage = ({ before, after, type }: ComparisonImageProps) => {
+  const [showAfter, setShowAfter] = useState(false);
+
+  return (
+    <div 
+      className="relative group cursor-pointer rounded-lg overflow-hidden shadow-card hover:shadow-soft transition-all duration-300"
+      onMouseEnter={() => setShowAfter(true)}
+      onMouseLeave={() => setShowAfter(false)}
+    >
+      <div className="aspect-[4/3] relative">
+        <img
+          src={before}
+          alt={`${type} - Before`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            showAfter ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
+        <img
+          src={after}
+          alt={`${type} - After`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            showAfter ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+        
+        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        <div className="absolute top-4 left-4">
+          <span className="bg-background/90 text-foreground px-3 py-1 rounded-full text-sm font-medium">
+            {type}
+          </span>
+        </div>
+        
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2">
+            <span className="text-sm font-medium text-foreground">
+              {showAfter ? 'After' : 'Before'}
+            </span>
+            <p className="text-xs text-muted-foreground mt-1">
+              Hover to see transformation
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PortfolioGallery = () => {
+  return (
+    <section className="py-20 px-4 bg-secondary/30">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Before/After Portfolio
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            See the transformation. Natural results that preserve authentic skin texture.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12 animate-fade-in-up">
+          {portfolioItems.map((item, index) => (
+            <ComparisonImage
+              key={index}
+              before={item.before}
+              after={item.after}
+              type={item.type}
+            />
+          ))}
+        </div>
+
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <Button variant="outline" size="lg">
+            See Full Portfolio
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};

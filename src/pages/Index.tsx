@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/HeroSection";
+import { PersonalMessage } from "@/components/PersonalMessage";
+import { PortfolioGallery } from "@/components/PortfolioGallery";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FaqSection } from "@/components/FaqSection";
+import { ContactForm } from "@/components/ContactForm";
+import { StickyCta } from "@/components/StickyCta";
 
 const Index = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <HeroSection onCtaClick={scrollToContact} />
+      <PersonalMessage />
+      <PortfolioGallery />
+      <BenefitsSection />
+      <TestimonialsSection />
+      <FaqSection />
+      <ContactForm />
+      <StickyCta onCtaClick={scrollToContact} />
     </div>
   );
 };
