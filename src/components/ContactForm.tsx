@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration - You need to replace these with your actual EmailJS values
+// Get these from your EmailJS dashboard at https://www.emailjs.com/
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID  
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,16 +26,38 @@ export const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          file_link: formData.fileLink,
+          message: formData.message,
+          to_email: "hello@retoucherirving.com"
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
-    toast({
-      title: "Request Submitted Successfully! 🎉",
-      description: "Thanks! Your test image is in safe hands — I'll return the edit within 48 hours.",
-    });
+      toast({
+        title: "Request Submitted Successfully! 🎉",
+        description: "Thanks! Your test image is in safe hands — I'll return the edit within 48 hours.",
+      });
 
-    setFormData({ name: "", email: "", fileLink: "", message: "" });
-    setIsSubmitting(false);
+      // Reset form
+      setFormData({ name: "", email: "", fileLink: "", message: "" });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error Sending Request",
+        description: "Please try again or contact me directly at hello@retoucherirving.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
