@@ -31,18 +31,18 @@ const ComparisonImage = ({ before, after, type }: ComparisonImageProps) => {
       onMouseEnter={() => setShowAfter(true)}
       onMouseLeave={() => setShowAfter(false)}
     >
-      <div className="aspect-[4/3] relative">
+      <div className="aspect-[3/4] relative bg-muted/20">
         <img
           src={before}
           alt={`${type} - Before`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
             showAfter ? 'opacity-0' : 'opacity-100'
           }`}
         />
         <img
           src={after}
           alt={`${type} - After`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
             showAfter ? 'opacity-100' : 'opacity-0'
           }`}
         />
