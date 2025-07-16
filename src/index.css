@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 214 13% 95%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 43 74% 66%;
+    --accent: 43 96% 56%;
     --accent-foreground: 222 20% 15%;
 
     --destructive: 0 84% 60%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     /* Custom design tokens */
     --gradient-hero: linear-gradient(135deg, hsl(214 13% 98%), hsl(214 13% 95%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 74% 66%), hsl(43 74% 56%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 96% 46%));
     --shadow-soft: 0 4px 20px -2px hsl(215 25% 27% / 0.1);
     --shadow-card: 0 2px 12px -4px hsl(215 25% 27% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
