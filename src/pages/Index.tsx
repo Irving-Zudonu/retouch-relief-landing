@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { PersonalMessage } from "@/components/PersonalMessage";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
@@ -21,7 +20,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation onCtaClick={scrollToContact} />
       <HeroSection onCtaClick={scrollToContact} />
       <PersonalMessage />
       <PortfolioGallery />

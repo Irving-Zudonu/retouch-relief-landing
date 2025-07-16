@@ -20,7 +20,6 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         cta: "bg-gradient-accent text-accent-foreground hover:shadow-soft transform hover:scale-105 font-semibold",
         hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-card text-base font-semibold",
-        blackFriday: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft transform hover:scale-105 font-black text-base tracking-wide",
       },
       size: {
         default: "h-10 px-4 py-2",
