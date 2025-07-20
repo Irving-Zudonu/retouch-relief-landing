@@ -6,11 +6,10 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 
-// EmailJS Configuration - You need to replace these with your actual EmailJS values
-// Get these from your EmailJS dashboard at https://www.emailjs.com/
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID  
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_1f6qtlu";
+const EMAILJS_TEMPLATE_ID = "template_b10vmnj";
+const EMAILJS_PUBLIC_KEY = "W58OM17CoXbROACl6";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
