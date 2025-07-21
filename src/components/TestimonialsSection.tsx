@@ -4,18 +4,21 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "Portrait Photographer",
+    location: "Los Angeles, CA",
     content: "Exactly the style I wanted — saved me hours this week!",
     rating: 5
   },
   {
     name: "David Chen",
     role: "Fashion Photographer",
+    location: "New York, NY",
     content: "Flawless retouching, and super reliable delivery!",
     rating: 5
   },
   {
     name: "Emma Rodriguez",
     role: "Studio Owner",
+    location: "Miami, FL",
     content: "My go-to partner for all my studio shoots.",
     rating: 5
   }
@@ -23,7 +26,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 px-4">
+    <section id="testimonials" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -57,6 +60,9 @@ export const TestimonialsSection = () => {
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {testimonial.role}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {testimonial.location}
                 </div>
               </div>
             </div>

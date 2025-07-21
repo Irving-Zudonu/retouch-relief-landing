@@ -78,8 +78,11 @@ export const PortfolioGallery = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Before/After Portfolio
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             See the transformation. Natural results that preserve authentic skin texture.
+          </p>
+          <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+            All edits preserve natural skin tone, authentic lighting, and your unique editing style.
           </p>
         </div>
 

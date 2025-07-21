@@ -1,4 +1,4 @@
-import { Clock, RotateCcw, Sparkles, Palette, Users } from "lucide-react";
+import { Clock, RotateCcw, Sparkles, Palette, Users, Handshake } from "lucide-react";
 
 const benefits = [
   {
@@ -25,6 +25,11 @@ const benefits = [
     icon: Users,
     title: "200+ photographers served since 2019",
     description: "Trusted by professionals worldwide"
+  },
+  {
+    icon: Handshake,
+    title: "Long-term editing partner, not a one-time gig",
+    description: "Build a lasting relationship with consistent quality"
   }
 ];
 
@@ -38,6 +43,10 @@ export const BenefitsSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Reliable, professional retouching that saves you time without compromising your vision.
+            <br />
+            <span className="text-sm mt-2 inline-block">
+              Don't just take my word for it — <a href="#testimonials" className="text-accent hover:underline">see what photographers say</a>
+            </span>
           </p>
         </div>
 

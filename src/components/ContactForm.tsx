@@ -104,7 +104,15 @@ export const ContactForm = () => {
               {isSubmitting ? "Submitting..." : "Get My Free Test Edit"}
             </Button>
 
-            <p className="text-sm text-muted-foreground text-center">This is just to demonstrate quality, no payment required. You keep the result.</p>
+            <div className="text-center space-y-2">
+              <p className="text-sm text-muted-foreground">
+                Upload 1 image and I'll return a professionally retouched version within 48 hours—free.
+              </p>
+              <p className="text-xs text-accent font-medium">
+                ⚡ Only accepting 5 free test edits per week
+              </p>
+              <p className="text-sm text-muted-foreground">No payment required. You keep the result.</p>
+            </div>
             
             <div className="flex justify-center gap-6 pt-8 border-t border-border mt-8">
               <a href="https://www.instagram.com/retoucherirving" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors duration-200">
