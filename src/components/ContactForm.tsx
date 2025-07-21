@@ -105,9 +105,7 @@ export const ContactForm = () => {
             </Button>
 
             <div className="text-center space-y-2">
-              <p className="text-sm text-muted-foreground">
-                Upload 1 image and I'll return a professionally retouched version within 48 hours—free.
-              </p>
+              <p className="text-sm text-muted-foreground">Upload 1 image and I'll return a professionally retouched version within 48 hours, FREE.</p>
               <p className="text-xs text-accent font-medium">
                 ⚡ Only accepting 5 free test edits per week
               </p>
