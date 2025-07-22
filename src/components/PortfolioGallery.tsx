@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import portraitBefore from "@/assets/portrait-before.jpg";
-import portraitAfter from "@/assets/portrait-after.jpg";
+const portraitBefore = "/lovable-uploads/d647d840-86c6-45cb-b4e5-e854fec3a053.png";
+const portraitAfter = "/lovable-uploads/d75eea95-2a8a-4451-93c8-4d10eee8ed08.png";
 const beautyBefore = "/lovable-uploads/77628f65-5988-4704-8c3e-e0c46ad0cf4b.png";
 const beautyAfter = "/lovable-uploads/a257a8f1-1380-413b-b889-5b18930bf3d5.png";
 import newbornBefore from "@/assets/newborn-before.jpg";
