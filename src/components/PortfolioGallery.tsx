@@ -4,8 +4,8 @@ const portraitBefore = "/lovable-uploads/d647d840-86c6-45cb-b4e5-e854fec3a053.pn
 const portraitAfter = "/lovable-uploads/d75eea95-2a8a-4451-93c8-4d10eee8ed08.png";
 const beautyBefore = "/lovable-uploads/77628f65-5988-4704-8c3e-e0c46ad0cf4b.png";
 const beautyAfter = "/lovable-uploads/a257a8f1-1380-413b-b889-5b18930bf3d5.png";
-import newbornBefore from "@/assets/newborn-before.jpg";
-import newbornAfter from "@/assets/newborn-after.jpg";
+const newbornBefore = "/lovable-uploads/0f9307a6-6198-4147-a18d-096c5a7517b0.png";
+const newbornAfter = "/lovable-uploads/fde46c7d-f766-43b5-89c7-7a09252a62cb.png";
 const fashionBefore = "/lovable-uploads/0b5e4982-6962-440d-82df-5a25d5a8dbce.png";
 const fashionAfter = "/lovable-uploads/e3f186a6-5f6b-436e-b7be-15d7f34dffd0.png";
 
