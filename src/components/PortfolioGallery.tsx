@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import before1 from "@/assets/before-1.jpg";
-import after1 from "@/assets/after-1.jpg";
-import before2 from "@/assets/before-2.jpg";
-import after2 from "@/assets/after-2.jpg";
-import before3 from "@/assets/before-3.jpg";
-import after3 from "@/assets/after-3.jpg";
-import before4 from "@/assets/before-4.jpg";
-import after4 from "@/assets/after-4.jpg";
+import portraitBefore from "@/assets/portrait-before.jpg";
+import portraitAfter from "@/assets/portrait-after.jpg";
+import beautyBefore from "@/assets/beauty-before.jpg";
+import beautyAfter from "@/assets/beauty-after.jpg";
+import newbornBefore from "@/assets/newborn-before.jpg";
+import newbornAfter from "@/assets/newborn-after.jpg";
+import fashionBefore from "@/assets/fashion-before.jpg";
+import fashionAfter from "@/assets/fashion-after.jpg";
 
 const portfolioItems = [
-  { before: before1, after: after1, type: "Portrait" },
-  { before: before2, after: after2, type: "Beauty" },
-  { before: before3, after: after3, type: "Newborn" },
-  { before: before4, after: after4, type: "Fashion" },
+  { before: portraitBefore, after: portraitAfter, type: "Portrait" },
+  { before: beautyBefore, after: beautyAfter, type: "Beauty" },
+  { before: newbornBefore, after: newbornAfter, type: "Newborn" },
+  { before: fashionBefore, after: fashionAfter, type: "Fashion" },
 ];
 
 interface ComparisonImageProps {
