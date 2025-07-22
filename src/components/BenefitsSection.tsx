@@ -45,7 +45,7 @@ export const BenefitsSection = () => {
             Reliable, professional retouching that saves you time without compromising your vision.
             <br />
             <span className="text-sm mt-2 inline-block">
-              Don't just take my word for it — <a href="#testimonials" className="text-accent hover:underline">see what photographers say</a>
+              Don't just take my word for it, <a href="#testimonials" className="text-accent hover:underline">see what photographers say</a>
             </span>
           </p>
         </div>
