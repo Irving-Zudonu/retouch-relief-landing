@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+
 const portraitBefore = "/lovable-uploads/d647d840-86c6-45cb-b4e5-e854fec3a053.png";
 const portraitAfter = "/lovable-uploads/d75eea95-2a8a-4451-93c8-4d10eee8ed08.png";
 const beautyBefore = "/lovable-uploads/77628f65-5988-4704-8c3e-e0c46ad0cf4b.png";
@@ -38,25 +40,27 @@ const ComparisonImage = ({ before, after, type }: ComparisonImageProps) => {
           className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
             showAfter ? 'opacity-0' : 'opacity-100'
           }`}
+          style={{ imageRendering: 'high-quality' }}
         />
         <img
           src={after}
           alt={`${type} - After`}
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 brightness-105 contrast-105 ${
             showAfter ? 'opacity-100' : 'opacity-0'
           }`}
+          style={{ imageRendering: 'high-quality' }}
         />
         
-        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
         <div className="absolute top-4 left-4">
-          <span className="bg-background/90 text-foreground px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-background/95 text-foreground px-3 py-1 rounded-full text-sm font-medium shadow-sm">
             {type}
           </span>
         </div>
         
         <div className="absolute bottom-4 left-4 right-4">
-          <div className="bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2">
+          <div className="bg-background/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm">
             <span className="text-sm font-medium text-foreground">
               {showAfter ? 'After' : 'Before'}
             </span>
