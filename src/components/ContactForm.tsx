@@ -35,7 +35,7 @@ export const ContactForm = () => {
       }, EMAILJS_PUBLIC_KEY);
       toast({
         title: "Request Submitted Successfully! 🎉",
-        description: "Thanks! Your test image is in safe hands — I'll return the edit within 48 hours."
+        description: "Thanks! Your test image is in safe hands, I'll return the edit within 48 hours."
       });
 
       // Reset form
