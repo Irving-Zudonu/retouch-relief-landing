@@ -1,11 +1,11 @@
-import retoucherImage from "@/assets/retoucher-headshot.jpg";
+
 export const PersonalMessage = () => {
   return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="bg-card rounded-2xl shadow-card p-8 md:p-12 animate-fade-in">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="flex-shrink-0">
-              <img src={retoucherImage} alt="Retoucher Irving" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-soft" />
+              <img src="/lovable-uploads/194ad03d-8168-471b-9814-b77a599f8166.png" alt="Retoucher Irving" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-soft" />
             </div>
             
             <div className="flex-1 space-y-6">
