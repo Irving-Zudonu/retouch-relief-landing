@@ -40,7 +40,6 @@ const ComparisonImage = ({ before, after, type }: ComparisonImageProps) => {
           className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
             showAfter ? 'opacity-0' : 'opacity-100'
           }`}
-          style={{ imageRendering: 'high-quality' }}
         />
         <img
           src={after}
@@ -48,7 +47,7 @@ const ComparisonImage = ({ before, after, type }: ComparisonImageProps) => {
           className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 brightness-105 contrast-105 ${
             showAfter ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ imageRendering: 'high-quality' }}
+          
         />
         
         <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
