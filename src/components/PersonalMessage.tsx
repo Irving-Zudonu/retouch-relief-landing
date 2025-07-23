@@ -5,7 +5,7 @@ export const PersonalMessage = () => {
         <div className="bg-card rounded-2xl shadow-card p-8 md:p-12 animate-fade-in">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="flex-shrink-0">
-              <img src="/lovable-uploads/c0e9c5ea-197d-4cc0-b4cd-3fc937625649.png" alt="Retoucher Irving" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-soft" />
+              <img src="/lovable-uploads/22abcc21-b12b-460a-ad06-d2a5ce9798e8.png" alt="Retoucher Irving" className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-soft" />
             </div>
             
             <div className="flex-1 space-y-6">
