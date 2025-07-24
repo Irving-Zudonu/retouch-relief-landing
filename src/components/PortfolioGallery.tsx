@@ -107,7 +107,7 @@ export const PortfolioGallery = () => {
             onClick={() => window.open('https://www.behance.net/gallery/123300611/BEFORE-AND-AFTER-PORTFOLIO', '_blank')}
             className="shadow-soft hover:shadow-card"
           >
-            🎨 See Full Portfolio
+            See Full Portfolio
           </Button>
         </div>
       </div>
