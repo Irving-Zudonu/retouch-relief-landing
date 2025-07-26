@@ -38,6 +38,11 @@ export const ContactForm = () => {
         description: "Thanks! Your test image is in safe hands, I'll return the edit within 48 hours."
       });
 
+      // Track Facebook Pixel Lead event
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+      }
+
       // Reset form
       setFormData({
         name: "",
