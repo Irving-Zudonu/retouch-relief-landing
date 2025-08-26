@@ -31,7 +31,7 @@ export const ContactForm = () => {
         from_email: formData.email,
         file_link: formData.fileLink,
         message: formData.message,
-        to_email: "hello@retoucherirving.com"
+        to_email: "irving@retoucherirving.com"
       }, EMAILJS_PUBLIC_KEY);
       toast({
         title: "Request Submitted Successfully! 🎉",
